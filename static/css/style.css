@@ -727,6 +727,22 @@ h1 {
    MOBILE
 ========================= */
 
+/* Bouton menu mobile - caché sur ordinateur */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: #593946;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
 @media (max-width: 850px) {
 
     /* Navigation */
@@ -735,9 +751,65 @@ h1 {
         padding: 0 8%;
     }
 
-    .navbar nav {
-        display: none;
-    }
+/* Navigation mobile */
+
+.navbar {
+    position: relative;
+
+    padding: 0 8%;
+}
+
+.menu-toggle {
+    display: block;
+    margin-left: auto;
+
+}
+
+.navbar nav {
+    display: none;
+
+    position: absolute;
+
+    top: 90px;
+    right: 8%;
+    left: auto;
+
+    width: 240px;
+
+    z-index: 1000;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 12px 20px;
+
+    background-color: #faf7fd;
+
+    border: 1px solid rgba(215, 155, 159, 0.25);
+    border-radius: 10px;
+
+    box-shadow: 0 12px 30px rgba(89, 57, 70, 0.12);
+}
+
+.navbar nav.open {
+    display: flex;
+}
+
+.navbar nav a {
+    width: 100%;
+
+    padding: 15px 0;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+.navbar nav a.active::after {
+    left: 35%;
+    right: 35%;
+}
 
 
     /* Titres généraux */

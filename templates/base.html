@@ -87,6 +87,12 @@
 
         </div>
 
+        <button class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false">
+    ☰
+</button>
 
         <nav>
 
@@ -125,6 +131,19 @@
         {% endblock %}
 
     </main>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.navbar nav');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('open');
+
+            const isOpen = nav.classList.contains('open');
+
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
 
 </body>
 
