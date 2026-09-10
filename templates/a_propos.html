@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+À propos | Ana Paula Chuquer - Hypnothérapeute à Genève
+
+{% endblock %}
+
+
+{% block description %}
+
+Découvrez l’approche d’Ana Paula Chuquer, hypnothérapeute certifiée à Genève. Un accompagnement bienveillant et personnalisé par l’hypnose ericksonienne et le coaching bien-être.
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="about-page">
+
+    <div class="about-content">
+
+        <p class="eyebrow">À PROPOS</p>
+
+        <h1 class="about-title">
+            Un espace pour vous retrouver
+        </h1>
+
+        <div class="about-text">
+
+            <p>
+                Parce que chaque histoire est unique, chaque accompagnement
+                l’est également. Je vous accueille dans un espace privilégié,
+                confidentiel et bienveillant, où vous pouvez prendre le temps
+                de vous écouter, de déposer ce qui vous pèse et de vous
+                reconnecter à l’essentiel.
+            </p>
+
+            <p>
+                À travers l’hypnose ericksonienne et le coaching bien-être,
+                je vous accompagne avec douceur et précision dans les périodes
+                de transition, de questionnement ou de changement. Mon approche
+                vous invite à renouer avec vos ressources profondes, à faire
+                émerger de nouvelles perspectives et à retrouver un équilibre
+                plus juste, en accord avec la personne que vous êtes et celle
+                que vous souhaitez devenir.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-visual">
+
+        <div class="about-circle">
+
+            <img
+                src="{{ url_for('static', filename='images/ana_paula.png') }}"
+                alt="Ana Paula Chuquer"
+                class="about-image"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Hypnose ericksonienne à Genève | AP Thérapie
+
+{% endblock %}
+
+
+{% block description %}
+
+Découvrez les accompagnements proposés par AP Thérapie à Genève : hypnose ericksonienne et coaching bien-être pour avancer à votre rythme, mobiliser vos ressources et retrouver un équilibre intérieur.
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="method-page">
+
+    <div class="method-content">
+
+        <p class="eyebrow">
+            ACCOMPAGNEMENT
+        </p>
+
+        <h1 class="method-title">
+            Ma méthode :<br>
+            <span class="method-title-secondary">
+                équilibre et harmonie
+            </span>
+        </h1>
+
+        <h2 class="method-subtitle">
+            Une approche sur mesure
+        </h2>
+
+
+        <div class="method-text">
+
+<p>
+    Je privilégie une approche profondément personnalisée, fondée sur l’écoute,
+    la confiance et le respect de votre rythme. L’hypnose ericksonienne ouvre
+    un espace propice à la détente et au lâcher-prise, où l’inconscient peut
+    mobiliser ses propres ressources et faire émerger de nouvelles façons de
+    percevoir, de ressentir et d’agir.
+</p>
+
+<p>
+    Certaines expériences ou blessures anciennes peuvent continuer, parfois
+    à notre insu, d’influencer notre manière de vivre le présent, nos relations,
+    nos choix ou le regard que nous portons sur nous-mêmes. L’accompagnement
+    permet alors de poser un regard nouveau sur ce qui a été vécu et de retrouver
+    progressivement davantage de sérénité intérieure.
+</p>
+
+<p>
+    Au fil des séances, je vous accompagne pour renouer avec votre confiance,
+    écouter vos besoins, reconnaître votre valeur, poser vos limites et retrouver
+    un équilibre plus juste. Il ne s’agit pas de changer qui vous êtes, mais de
+    vous permettre de vous retrouver, de vous réapproprier vos ressources et
+    d’avancer avec davantage de liberté et d’harmonie.
+</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="method-visual">
+
+        <div class="method-circle">
+
+            <img
+                src="{{ url_for('static', filename='images/methode.png') }}"
+                alt="Accompagnement AP Thérapie"
+                class="method-image"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- Description Google -->
+    <meta name="description"
+          content="{% block description %}AP Thérapie à Genève – Ana Paula Chuquer, hypnothérapeute certifiée et coach bien-être. Un accompagnement personnalisé par l'hypnose ericksonienne et le coaching bien-être.{% endblock %}">
+
+
+    <!-- Partage WhatsApp, LinkedIn, Facebook, etc. -->
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:site_name"
+          content="AP Thérapie">
+
+    <meta property="og:title"
+          content="{% block og_title %}AP Thérapie | Ana Paula Chuquer{% endblock %}">
+
+    <meta property="og:description"
+          content="{% block og_description %}Hypnose ericksonienne et coaching bien-être à Genève avec Ana Paula Chuquer.{% endblock %}">
+
+    <meta property="og:image"
+      content="{{ url_for('static', filename='images/social/og-ap-therapie.png', _external=True) }}">
+
+    <meta property="og:url"
+      content="{{ request.url }}">
+
+    <!-- Titre de la page -->
+    <title>
+        {% block title %}AP Thérapie{% endblock %}
+    </title>
+
+
+    <!-- Police Cormorant Garamond -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Favicon AP Thérapie -->
+    <link rel="icon"
+          type="image/png"
+          href="{{ url_for('static', filename='favicon/favicon.png') }}">
+
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <a href="{{ url_for('home') }}">
+
+                <span class="brand-main">
+                    AP THÉRAPIE
+                </span>
+
+                <span class="brand-sub">
+                    ANA PAULA CHUQUER
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <nav>
+
+            <a href="{{ url_for('home') }}"
+               class="{% if request.endpoint == 'home' %}active{% endif %}">
+                Accueil
+            </a>
+
+            <a href="{{ url_for('a_propos') }}"
+               class="{% if request.endpoint == 'a_propos' %}active{% endif %}">
+                À propos
+            </a>
+
+            <a href="{{ url_for('accompagnements') }}"
+               class="{% if request.endpoint == 'accompagnements' %}active{% endif %}">
+                Accompagnements
+            </a>
+
+            <a href="{{ url_for('contact') }}"
+               class="{% if request.endpoint == 'contact' %}active{% endif %}">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU DE LA PAGE
+    ========================== -->
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</body>
+
+</html>

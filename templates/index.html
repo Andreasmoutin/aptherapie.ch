@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+
+Hypnothérapeute à Genève | AP Thérapie - Ana Paula Chuquer
+
+{% endblock %}
+
+
+{% block description %}
+
+AP Thérapie à Genève – Ana Paula Chuquer, hypnothérapeute certifiée et coach bien-être. Hypnose ericksonienne et accompagnement personnalisé pour retrouver équilibre, confiance et sérénité.
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero" id="accueil">
+
+    <div class="hero-content">
+
+<h1 class="hero-title">
+    Un temps suspendu,<br>
+    un moment hors du temps.
+</h1>
+
+        <p class="subtitle">
+            Pour prendre soin de soi,
+            pour se reconnecter à soi.
+        </p>
+
+<div class="hero-buttons">
+
+    <a href="{{ url_for('contact') }}" class="btn-primary">
+        Prendre rendez-vous
+    </a>
+
+    <a href="{{ url_for('a_propos') }}" class="btn-secondary">
+        Découvrir mon approche
+    </a>
+
+    <a href="{{ url_for('accompagnements') }}" class="btn-secondary">
+        Accompagnements
+    </a>
+
+</div>
+
+    </div>
+
+
+<div class="hero-visual">
+
+    <div class="hero-circle">
+
+        <img
+            src="{{ url_for('static', filename='images/orchidee.png') }}"
+            alt="Orchidée - AP Thérapie"
+            class="orchid-image"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<section class="intro" id="apropos">
+
+    <p class="section-label">
+        AP THÉRAPIE
+    </p>
+
+    <h2 class="intro-title">
+        Hypnose ericksonienne<br>
+        & coaching bien-être
+    </h2>
+
+    <p class="intro-text">
+        Un accompagnement personnalisé dans un espace bienveillant,
+        pour retrouver un équilibre, dépasser certains blocages
+        et avancer à votre rythme.
+    </p>
+
+</section>
+
+{% endblock %}
