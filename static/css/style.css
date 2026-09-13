@@ -360,32 +360,6 @@ h1 {
     text-align: justify;
 }
 
-
-/* Photo À propos */
-
-.about-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-circle {
-    width: 360px;
-    height: 360px;
-
-    border-radius: 50%;
-    border: 4px solid rgba(215, 155, 159, 0.45);
-
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 15px 40px rgba(89, 57, 70, 0.12);
-}
-
-
 /* Photo À propos */
 
 .about-visual {
@@ -410,8 +384,8 @@ h1 {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-    object-position: center 15%;
+    object-fit: contain;
+    object-position: center;
 
     display: block;
 }
